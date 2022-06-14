@@ -2,18 +2,6 @@ import time
 from itertools import combinations
 import random
 
-
-def powerset(items):
-    res = [[]]
-
-    for item in items:
-        newset = [r+[item] for r in res]
-
-        res.extend(newset)
-
-    return res
-
-
 start_time = time.time()
 
 
@@ -38,16 +26,14 @@ def brute_force(n, budget, HW):
 HW = [(100000, 6), (122000, 5), (127000, 7),
       (150000, 9), (200000, 10), (240000, 11)]
 
-HR = []
 
-for n in range(30):
-    harga = random.randrange(100000, 240000, 2000)
-    lama = random.randrange(6, 11)
-    r = (harga, lama)
-    HR.append(r)
+#HR = []
 
-#for n in range(len(HW)):
-#    print(HW[n])
+#for n in range(30):
+#    harga = random.randrange(100000, 240000, 2000)
+#    lama = random.randrange(6, 11)
+#    r = (harga, lama)
+#    HR.append(r)
 
 best = brute_force(len(HR), 400000, HR)
 print(best)

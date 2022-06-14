@@ -25,17 +25,17 @@ def dpcigarettesselector(n, budget, HW):
     return optimalsolution(len(HW), budget), result
 
 
-# HW == Harga dan waktu habis
 HW = [(100000, 6), (122000, 5), (127000, 7),
       (150000, 9), (200000, 10), (240000, 11)]
 
-HR = []
+# Untuk Melakukan Pengujian Effisiensi Algoritma
+#HR = []
 
-for n in range(100):
-    harga = random.randrange(100000, 240000, 2000)
-    lama = random.randrange(6, 11)
-    r = (harga, lama)
-    HR.append(r)
+#for n in range(100):
+#    harga = random.randrange(100000, 240000, 2000)
+#    lama = random.randrange(6, 11)
+#    r = (harga, lama)
+#    HR.append(r)
 
 best = dpcigarettesselector(len(HR), 400000, HR)
 
